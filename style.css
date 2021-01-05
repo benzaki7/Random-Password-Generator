@@ -20,12 +20,19 @@
 .container h1 {
     font-size: 2.5rem;
     font-weight: 600;
-    margin-bottom: 8vh;
+    margin-bottom: 10vh;
+    padding: 5px;
     text-align: center;
 }
 
-.container input {
+.input {
     width: 50%;
+    position: relative;
+    margin-bottom: 5vh;
+}
+
+#password {
+    width: 100%;
     height: 80px;
     border: 0;
     border-bottom: 5px solid #7bc74d;
@@ -38,19 +45,19 @@
     font-size: 2rem;
     font-weight: 600;
     letter-spacing: 4px;
-    position: relative;
+    
 }
 
-.container input::placeholder {
-    font-size: 1rem;
+#password::placeholder {
+    font-size: 1.1rem;
     font-weight: 400;
     letter-spacing: 1px;
 }
 
 #copy {
     position: absolute;
-    top: 47vh;
-    left: 72vw;
+    top: 2.7vh;
+    right: 1vw;
     font-size: 2rem;
     color:  #212121;
     cursor: pointer;
@@ -102,6 +109,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     background-color: #f9fbfd;
     color:  #222831;
     font-size: 1rem;
@@ -109,60 +117,77 @@ footer {
 }
 
 @media screen and (max-width: 1126px) {
-    .container input {
-        width: 60%;
-    }
-
-    #copy {
-        top: 46.9vh;
-        left: 76vw;
+    .input {
+        width: 70%;
     }
 }
 
 
 @media screen and (max-width: 850px) {
-    .container input {
-        width: 80%;
-        height: 80px;
-        padding: 15px 0 15px 15px;
+    .container h1 {
         font-size: 2rem;
-        font-weight: 600;
-        letter-spacing: 4px; 
     }
-    
-    #copy {
-        top: 46.9vh;
-        left: 84vw;
+    #password {
+        font-size: 1.5rem;
+    }
+    #password::placeholder {
+        font-size: 1rem;
     }
     .alertBox {
         font-size: 3rem;
         font-weight: 700; 
     }
-}
 
-@media screen and (max-width: 566px) {
-    .container input {
-        width: 80%;
-        height: 80px;
-        padding: 15px 0 15px 15px;
-        font-size: 1.5rem;
-        font-weight: 600;
-        letter-spacing: 4px; 
-    }
-    
-    #copy {
-        top: 51.5vh;
-        left: 82vw;
+
+ @media screen and (max-width: 566px) {
+    .container h1 {
         font-size: 1.8rem;
     }
-
+    .input {
+        width: 80%;
+    }
+    #password {
+        font-size: 1.2rem;
+    }
+    #password::placeholder {
+        font-size: 0.9rem;
+    }
+    #copy {
+        top: 3.5vh;
+        right: 2vw;
+        font-size: 1.8rem;
+    }
     .btn {
         padding: 12px 10px;
         font-size: 1rem;
     }
-
     .alertBox {
         font-size: 2rem;
         font-weight: 700; 
     }
-}
+} 
+
+@media screen and (max-width: 384px) {
+    .input {
+        width: 90%;
+    }
+    #password {
+        font-size: 1rem;
+    }
+    #password::placeholder {
+        font-size: 0.8rem;
+    }
+    #copy {
+        top: 3.5vh;
+        right: 3vw;
+        font-size: 1.5rem;
+    }
+    .btn {
+        padding: 10px 8px;
+        font-size: 0.8rem;
+    }
+    .alertBox {
+        font-size: 2rem;
+        font-weight: 700; 
+    }
+} 
